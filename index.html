@@ -2,53 +2,154 @@
 <html lang="cs">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Gabriel Mazáč — Přijímačky na IT</title>
-    <meta name="description"
-        content="Stránka o mně: devátá třída, základy HTML/CSS, stříhám videa, chci na IT školu." />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabriel Mazác - Moje stránka</title>
+    <!-- popis stranky pro vyhledavace -->
+    <meta name="description" content="Osobní stránka Gabriela Mazáce - žák 9. trídy, strih videí, design a tvorba webu">
+    <!-- pripojeni stylu -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <!-- Menu -->
-    <header>
-        <div class="container">
-            <h1 class="logo">Gabriel Mazáč</h1>
-            <nav aria-label="Hlavní navigace">
-                <ul class="nav">
-                    <li><a href="#o-mne">O mně</a></li>
+
+    <!-- hlavicka stranky s navigaci -->
+    <header class="hlavicka">
+        <div class="obal">
+            <h1 class="logo">Gabriel Mazác</h1>
+            <!-- navigace - menu -->
+            <nav>
+                <ul class="menu">
+                    <li><a href="#o-mne">O mne</a></li>
                     <li><a href="#dovednosti">Dovednosti</a></li>
                     <li><a href="#projekty">Projekty</a></li>
-                    <li><a href="#konicky">Koníčky</a></li>
+                    <li><a href="#konicky">Konícky</a></li>
                     <li><a href="#kontakt">Kontakt</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- O mě -->
-    <section id="o-mne" class="section">
-
+    <!-- uvodni sekce - hero -->
+    <section class="hero">
+        <div class="obal">
+            <h2>Dobrý den, jmenuji se Gabriel ??</h2>
+            <p>Jsem žák 9. trídy, hlásím se na strední školu s IT zamerením. Baví me hlavne strih videí, animace a vizuální efekty.</p>
+            <!-- pozdrav ktery se meni podle casu - javascript -->
+            <p id="pozdrav"></p>
+            <a class="tlacitko" href="#projekty">Moje projekty</a>
+        </div>
     </section>
 
-    <!-- Dovednosti -->
-    <section id="dovednosti" class="section alt">
+    <!-- sekce o mne -->
+    <section id="o-mne" class="sekce">
+        <div class="obal dva-sloupce">
+            <div>
+                <h3>O mne</h3>
+                <p>
+                    Jmenuju se Gabriel Mazác a chodím do 9. trídy. Nejvíc me baví <strong>strih videí</strong>,
+                    tvorba animací a práce s vizuálními efekty. Strihám v <strong>DaVinci Resolve</strong>.
+                    Rád vymýšlím jak video udelat zajímavejší — prechody, efekty, zvuky, proste celkový dojem.
+                </p>
+                <p>
+                    Krome videí me zajímá i <strong>design</strong> a tvorba webových stránek. Naucil jsem se
+                    základy <strong>HTML</strong> a <strong>CSS</strong> a líbí se mi jak se dá kódováním
+                    vytvorit neco vizuálne hezkého. Na grafiku používám <strong>GIMP</strong> a taky jsem
+                    zkoušel <strong>Blender</strong>, ale v tom jsem zatím zacátecník.
+                </p>
+                <!-- muj cil -->
+                <p class="cil">
+                    <strong>Co chci na strední:</strong> zlepšit se ve video editingu, naucit se
+                    motion grafiku, pracovat v týmu a propojit video tvorbu s webovým designem.
+                </p>
+            </div>
+            <!-- obrazek -->
+            <div class="obrazek-box">
+                <img src="https://picsum.photos/500/350" alt="Obrázek pocítace">
+                <p class="popisek">Ilustracní obrázek (zatím nemám vlastní)</p>
+            </div>
+        </div>
     </section>
 
-    <!-- Projekty -->
-    <section id="projekty" class="section">
+    <!-- dovednosti -->
+    <section id="dovednosti" class="sekce tmava">
+        <div class="obal">
+            <h3>Co umím</h3>
+            <!-- seznam dovednosti jako tagy -->
+            <ul class="tagy">
+                <li>Strih videa</li>
+                <li>Animace a efekty</li>
+                <li>DaVinci Resolve</li>
+                <li>GIMP</li>
+                <li>Blender (zacátecník)</li>
+                <li>Tvorba miniatur</li>
+                <li>HTML (základy)</li>
+                <li>CSS (základy)</li>
+            </ul>
+        </div>
     </section>
 
-    <!-- Koníčky -->
-    <section id="konicky" class="section alt">
+    <!-- projekty -->
+    <section id="projekty" class="sekce">
+        <div class="obal">
+            <h3>Moje projekty</h3>
+
+            <div class="karty">
+                <!-- prvni projekt -->
+                <div class="karta">
+                    <h4>?? Tato stránka</h4>
+                    <p>Moje první webová stránka kterou jsem udelal sám v HTML a CSS.</p>
+                    <span class="odkaz-brzy">Práve se na ni díváte :)</span>
+                </div>
+
+                <!-- druhy projekt -->
+                <div class="karta">
+                    <h4>?? Strih videí</h4>
+                    <p>Strihám videa v DaVinci Resolve, delám grafiku v GIMPu a zkouším i Blender. Pracuju s efekty, prechody a animacemi.</p>
+                    <span class="odkaz-brzy">Ukázky pripravuji</span>
+                </div>
+            </div>
+
+            <!-- jednoduchy pocitadlo kliknuti - javascript ukazka -->
+            <div class="pocitadlo-box">
+                <p>Ukázka JavaScriptu - pocítadlo kliknutí:</p>
+                <button id="pocitadlo-btn" class="tlacitko">Klikni na me! (0×)</button>
+            </div>
+        </div>
     </section>
 
-    <!-- Kontakt -->
-    <section id="kontakt" class="section">
+    <!-- konicky -->
+    <section id="konicky" class="sekce tmava">
+        <div class="obal">
+            <h3>Konícky</h3>
+            <p>
+                Muj hlavní konícek je tvorba videí — rád tocím, strihám a zkouším ruzné efekty
+                a animace. Baví me vymýšlet jak video udelat co nejlepší. Na grafiku používám GIMP
+                a zacal jsem se ucit i Blender. Taky chodím do posilovny.
+            </p>
+        </div>
     </section>
 
-    <footer class="site-footer">
+    <!-- kontakt -->
+    <section id="kontakt" class="sekce">
+        <div class="obal">
+            <h3>Kontakt</h3>
+            <p>
+                Pokud me chcete kontaktovat, napište mi na email:
+                <a href="mailto:gabriel.mazac1@gmail.com">gabriel.mazac1@gmail.com</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- paticka -->
+    <footer class="paticka">
+        <div class="obal">
+            <p>© <span id="rok"></span> Gabriel Mazác | Udeláno jako projekt k prijímackám</p>
+        </div>
     </footer>
+
+    <!-- javascript na konci aby se stranka nacetla driv -->
+    <script src="script.js"></script>
 </body>
 
 </html>
