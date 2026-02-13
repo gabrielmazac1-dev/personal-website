@@ -1,16 +1,20 @@
 /* ===================
-   STYLY PRO MOU STRANKU
+   STYLY PRO MOU STRÁNKU
    Gabriel Mazác, 2025
    =================== */
 
-/* zakladni reset - aby se to chovalo vsude stejne */
+/* Zakladní reset - aby se to chovalo všude stejně */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* zakladni nastaveni stranky */
+/* Zakladní nastavení stránky */
+html {
+    scroll-padding-top: 60px;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #0f172a;
@@ -18,14 +22,14 @@ body {
     line-height: 1.6;
 }
 
-/* obalovy kontejner - drzi obsah uprostred */
+/* Obalovacie kontejner - drzí obsah uprostřed */
 .obal {
     max-width: 960px;
     margin: 0 auto;
     padding: 15px;
 }
 
-/* hlavicka nahore */
+/* Hlavička nahofe */
 .hlavicka {
     background-color: #0b1220;
     border-bottom: 1px solid #1f2937;
@@ -34,13 +38,13 @@ body {
     z-index: 10;
 }
 
-/* logo - moje jmeno */
+/* Logo – moje jméno */
 .logo {
     font-size: 1.3rem;
     margin-bottom: 5px;
 }
 
-/* navigacni menu */
+/* Navigace - menu */
 .menu {
     list-style: none;
     display: flex;
@@ -48,19 +52,19 @@ body {
     flex-wrap: wrap;
 }
 
-/* odkazy v menu */
+/* Odkazy v menu */
 .menu a {
     color: #e5e7eb;
     text-decoration: none;
 }
 
-/* kdyz najedu mysi na odkaz */
+/* Když najedu myší na odkaz */
 .menu a:hover {
     text-decoration: underline;
     color: #60a5fa;
 }
 
-/* uvodni hero sekce */
+/* Ústavní hero sekce */
 .hero {
     background-color: #1e293b;
     padding: 50px 0;
@@ -77,14 +81,14 @@ body {
     margin-bottom: 12px;
 }
 
-/* pozdrav z javascriptu */
+/* Pozdrav z javascriptu */
 #pozdrav {
     color: #60a5fa;
     font-weight: bold;
     font-size: 1.1rem;
 }
 
-/* tlacitko / odkaz */
+/* Tlačítko / odkaz */
 .tlacitko {
     display: inline-block;
     padding: 10px 18px;
@@ -97,49 +101,51 @@ body {
     font-size: 1rem;
 }
 
-/* hover efekt na tlacitko */
+/* Hover efekt na tlačítko */
 .tlacitko:hover {
     background-color: rgba(96, 165, 250, 0.2);
 }
 
-/* obecna sekce */
+/* Obecná sekce */
 .sekce {
     padding: 35px 0;
 }
 
-/* tmavsi varianta sekce - aby se to stridalo */
+/* Tmavší varianta sekce – aby se to střídalo */
 .sekce.tmava {
     background-color: #111827;
 }
 
-/* dva sloupce vedle sebe */
+/* Dva sloupce vedle sebe */
 .dva-sloupce {
     display: grid;
     gap: 20px;
     grid-template-columns: 1fr;
 }
 
-/* na vetsim monitoru dva sloupce */
+/* Na větším monitoru dva sloupce */
 @media (min-width: 750px) {
     .dva-sloupce {
         grid-template-columns: 1fr 1fr;
     }
 }
 
-/* box s obrazkem */
+/* Box s obrázkem */
 .obrazek-box img {
     width: 100%;
+    height: auto;
     border-radius: 10px;
+    object-fit: cover;
 }
 
-/* popisek pod obrazkem */
+/* Popis pod obrázkem */
 .popisek {
     font-size: 0.85rem;
     color: #9ca3af;
     margin-top: 5px;
 }
 
-/* cil - zvyrazneny text */
+/* Cíl – zvyrazněný text */
 .cil {
     background-color: #1e293b;
     padding: 10px;
@@ -148,7 +154,7 @@ body {
     border-left: 3px solid #60a5fa;
 }
 
-/* tagy s dovednostma */
+/* Tagy s dovednostmi */
 .tagy {
     list-style: none;
     display: flex;
@@ -156,7 +162,7 @@ body {
     gap: 8px;
 }
 
-/* jednotlivy tag */
+/* Jednotlivý tag */
 .tagy li {
     background-color: #0b1220;
     border: 1px solid #1f2937;
@@ -165,21 +171,21 @@ body {
     font-size: 0.9rem;
 }
 
-/* karty s projekty */
+/* Karty s projekty */
 .karty {
     display: grid;
     gap: 15px;
     grid-template-columns: 1fr;
 }
 
-/* na vetsim displeji dva sloupce */
+/* Na větším displeji dva sloupce */
 @media (min-width: 750px) {
     .karty {
         grid-template-columns: 1fr 1fr;
     }
 }
 
-/* jednotliva karta */
+/* Jednotlivá karta */
 .karta {
     background-color: #0b1220;
     border: 1px solid #1f2937;
@@ -191,14 +197,14 @@ body {
     margin-bottom: 8px;
 }
 
-/* text kdyz odkaz jeste neni */
+/* Text když odkaz jestud není */
 .odkaz-brzy {
     color: #9ca3af;
     font-size: 0.9rem;
     font-style: italic;
 }
 
-/* box s pocitadlem */
+/* Box s počítadlem */
 .pocitadlo-box {
     margin-top: 25px;
     text-align: center;
@@ -207,7 +213,7 @@ body {
     border-radius: 10px;
 }
 
-/* paticka dole */
+/* Patička dole */
 .paticka {
     border-top: 1px solid #1f2937;
     padding: 15px 0;
@@ -216,7 +222,7 @@ body {
     font-size: 0.9rem;
 }
 
-/* aby byly odkazy modre */
+/* Aby byly odkazy modré */
 a {
     color: #60a5fa;
 }
